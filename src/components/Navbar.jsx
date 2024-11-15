@@ -53,8 +53,23 @@ const Navbar = () => {
           <button onClick={toggleMenu} className="cursor-pointer md:hidden">
             {isOpen ? <FaXmark className="w-5 h-5"/> : <FaBars className="w-5 h-5"/> }
            </button>
-              </div>
+        </div>
+        
       </nav>
+      {/* mobile menu */}
+      <div className="text-black">
+          <ul className={`md:hidden block text-lg space-y-4 px-4 py-6 mt-14 bg-white ${isOpen?'fixed top-0 left-0 w-full transition-all ease-out duration-100':'hidden'}`}>
+          {navItems.map(({ path, link }) => (
+                      <li className="text-black" key={path}>
+                          <NavLink  to={path} className=' hover:text-gray-400'>
+              {link}
+            </NavLink>
+              </li>
+            
+          ))}
+          </ul>
+       
+        </div>
     </header>
   );
 };
