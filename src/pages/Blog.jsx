@@ -10,7 +10,7 @@ const Blog = () => {
     
       </div>
         {/* all blogs */}
-        <div className="max-w-7 p-4">
+        <div className="p-8">
         <BlogPage/>
       </div>
     </div>
