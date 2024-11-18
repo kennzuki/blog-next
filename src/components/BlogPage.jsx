@@ -1,11 +1,12 @@
 
 // import { useState,useEffect } from 'react';
+
 import BlogCard from "./BlogCard";
 
 
 const BlogPage = () => {
   
-
+  
   // useEffect(() => {
   //    function fetchPosts() {
   //     let url = `http://localhost:5173/api/blogData.json`;
