@@ -2,6 +2,7 @@
 // import { useState,useEffect } from 'react';
 
 import BlogCard from "./BlogCard";
+import SideBar from "./SideBar";
 
 
 const BlogPage = () => {
@@ -24,8 +25,10 @@ const BlogPage = () => {
         {/* categories */}
         <section className=""></section>
         {/* blog cards */}
-        <section className="">
-            <BlogCard/>
+      <section className="grid xs:grid-cols-1 md:grid-cols-4 gap-8">
+        <section className="col-span-3"> <BlogCard/></section>
+           
+            <SideBar  />
         </section>
         {/* cpagination */}
         <section className=""></section>

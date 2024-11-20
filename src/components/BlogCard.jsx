@@ -9,6 +9,8 @@ const BlogCard = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('All');
 
+  
+
   // Get unique categories
   const categories = ['All', ...new Set(data.map(blog => blog.category))];
 
@@ -28,7 +30,7 @@ const BlogCard = () => {
         className='flex flex-col gap-3 items-start border p-8 rounded-xl shadow-xl'
         key={blog.id}
       >
-        <div className='p-4'>
+        <div className='p-4  hover:scale-105 duration-300'>
           <img src={blog.image} alt='' className='w-full rounded-xl' />
         </div>
         <p className='font-bold'>{blog.title}</p>
@@ -59,8 +61,8 @@ const BlogCard = () => {
             }}
             className={`px-4 py-2 rounded ${
               selectedCategory === category 
-                ? 'bg-yellow-500 text-white' 
-                : 'bg-orange-500 text-white'
+                ? 'bg-yellow-500 text-white hover:scale-105 duration-300' 
+                : 'bg-orange-500 text-white hover:scale-105 duration-300'
             }`}
           >
             {category}
