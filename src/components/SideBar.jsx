@@ -13,7 +13,7 @@ const SideBar = () => {
 
   //map blog to get filtered posts from latest published
   const filterdPosts = latestPosts.map((blog) => (
-    <div className='flex flex-col gap-2 mb-8' key={blog.id}>
+    <div className='flex flex-col gap-2 mb-8 border-b p-4 shadow-xl rounded' key={blog.id}>
       <h3 className='font-semibold'>{blog.title}</h3>
       <Link className='text-orange-500 capitalize flex gap-4 place-items-center cursor-pointer'>
         <FaArrowRight />
@@ -23,9 +23,9 @@ const SideBar = () => {
   ));
 
   return (
-    <div className='xs:hidden'>
-      <section className='xs:hidden'>
-        <h3 className='text-2xl text-orange-500 mb-8'>LatestBlogs</h3>
+    <div className='xs:hidden mx-auto'>
+      <section className='xs:hidden mx-auto'>
+        <h3 className='text-2xl text-orange-500 mb-8'>Latest Blogs</h3>
         {filterdPosts}
       </section>
     </div>

@@ -59,7 +59,7 @@ const BlogCard = () => {
               setSelectedCategory(category);
               setPageNumber(0); // Reset to first page when changing category
             }}
-            className={`px-4 py-2 rounded ${
+            className={`px-4 py-2 rounded border-b ${
               selectedCategory === category 
                 ? 'bg-yellow-500 text-white hover:scale-105 duration-300' 
                 : 'bg-orange-500 text-white hover:scale-105 duration-300'
